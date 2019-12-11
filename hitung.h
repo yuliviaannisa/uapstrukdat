@@ -21,3 +21,21 @@ class queue{
 		queue1[++belakang]=x;
         cout <<x<<" Dimasukkan ke dalam daftar tunggu"<<endl;
         }
+void dequeue(){
+        if(depan==belakang){
+            cout <<"Salon Kosong";
+			return;
+		}
+    	cout <<"Panggil nomor member " <<queue1[++depan]<<endl;
+    }
+                
+    void display(){
+        if(belakang==depan){
+            cout <<" Salon Kosong";
+            return;
+        }
+        for(int i=depan+1;i<=belakang;i++){
+            cout <<queue1[i]<<" ";
+        }
+    }
+};
